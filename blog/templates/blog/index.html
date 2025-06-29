@@ -1,0 +1,52 @@
+{% extends 'base.html' %}Add commentMore actions
+{% load static %}
+
+{% block title %}
+  My Django Blog
+{% endblock %}
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static 'blog/post.css' %}">
+  <link rel="stylesheet" href="{% static "blog/index.css" %}">
+{% endblock %}
+
+{% block content %}
+
+  <section id="welcome">
+    <header>
+      <img src="{% static 'blog/images/photo_1295917884223105076_c.jpg' %}" alt="Denis - Author of the blog">
+      <h2>Heeey <br> I`m <a href="{% url 'about-me' %}">Denis Toma</a></h2>
+    </header>
+    <p>I`m a python backend developer and those are my projects:</p>
+  </section>
+
+  <section id="latest-posts">
+    <h2><a href="{% url 'posts-page' %}">All my pet projects</a></h2>
+      <ul>
+        {% for post in posts %}
+          {% include 'blog/includes/post.html' %}
+        {% endfor %}
+      </ul>
+  </section>
+
+  <section id="about">
+    <h2>I`m looking for the job!</h2>
+    <p>
+      Here are my contact info:
+    </p>
+    <ul>
+      <li>
+        <a>Email: dedenistoma139@gmail.com</a>
+      </li>
+      <li>
+        <a>Phone number: +40 757 664 901</a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/denis-toma-239744353/" target="_blank">LinkedIn</a>
+      </li>
+      <li>
+        <a href="https://github.com/DeDen41k" target="_blank">GitHub</a>
+      </li>
+    </ul>
+  </section>
+{% endblock %}
