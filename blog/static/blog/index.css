@@ -125,3 +125,15 @@
   color: white;
   transform: scale(1.05);
 }
+
+#welcome a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+#welcome a:hover,
+#welcome a:active {
+  color: #FFD3B6;
+}

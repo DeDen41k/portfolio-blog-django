@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+About Me
+{% endblock %}
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static 'blog/about_me.css' %}">
+{% endblock %}
+
+{% block content %}
+  <section id="summary">
+    <h2>I`m a Python Backend Developer</h2>
+    <img src="{% static 'blog/images/photo_5197712646902771425_y.jpg' %}" alt="Hi! :)">
+  </section>
+
+  <main>
+    <div class="main-description">
+      <p>
+          I`m 19 years old right now, studying software engineering on the second year. I`m looking for a job that would help me start my career in IT and fulfill my potential.
+        I can describe myself as a disciplined man with an ambitions filled with bright initiatives. I can say that I can learn pretty fast, so the leak of my experience can be overshadowed by my potential.
+        I have a great knowledge of english which coexists with my communication skills. Also worth mentioning that I have some notable leadership qualities by having an experience of managing people and events, solving problems and seeking for solutions and volunteering.
+        I`m exited for every beautiful opportunity that will help me make my dreams come true!
+      </p>
+    </div>
+  </main>
+
+  <section id="hobbies">
+    <ul>
+      <li>
+        <h2>Music</h2>
+        <p>I`m leader and co-founder of a alternative-indie rock band of ukrainian refugees. (Also a drummer)</p>
+      </li>
+      <li>
+        <h2>Sports</h2>
+        <p>Since 16 years of age I`m consistent at visiting a nearby gym. You can call me a basketball and a table tennis enjoyer too</p>
+      </li>
+      <li>
+        <h2>Movies</h2>
+        <p>When I finished school, everybody thought I would go and study filmmaking. I guess next time)</p>
+      </li>
+      <li>
+        <h2>Hiking/Sightseeing</h2>
+        <p>Due to the nature of a city I currently live in, I can find myself enjoying the beautiful view or reading a history behind some impressive building</p>
+      </li>
+      <li>
+        <h2>Nerdy Stuff</h2>
+        <p>From my childhood I liked collecting things (comics, lego, transformer figures etc), so now I guess being interested in what happened in a new 'Star Wars' series (or something else) just stuck with me</p>
+      </li>
+    </ul>
+  </section>
+
+{% endblock %}
+
+

@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView, View, CreateView
+from django.views.generic import ListView, View, TemplateView
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from .forms import CommentForm
@@ -97,6 +97,10 @@ class ReadLaterView(View):
         request.session['stored_posts'] = stored_posts
 
         return HttpResponseRedirect('/')
+
+
+class AboutMeView(TemplateView):
+    template_name = 'blog/about_me.html'
 
 # def index(request):
 #     sorted_posts = all_posts.order_by('-date')
